@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::selection{
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+header {
+    height: 46px;
+    max-width: 100%;
+}
+@media (max-width:771px) {
+  .left-section span b{
+    display: none;
+  }
+  .right-section {
+    display: none;
+  }
+}
+.left-section span{
+  flex-wrap: wrap;
+
+}
+form {
+  width: 450px;
+}
+form input[type="search"] {
+  border-radius: 2px 0 0 2px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -ms-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+  padding: 8 12px;
+  border-right: none;
+  height: 36px;
+}
+form input[type="search"]:focus {
+    outline: none;
+}
+form button {
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    -ms-border-radius: 0 2px 2px 0;
+    -o-border-radius: 0 2px 2px 0;
+    height: 36px;
+    width: 36px;
+    margin-left: -5px;
+}
+form i{
+  cursor: pointer;
+}
+/* End Header */
+
+.content-area {
+    height: calc(100vh - 46px);
+    width: 100%;
+    background-color: aquamarine;
+}
+/* Start Aside */
+.bars{
+    z-index: 2;
+    cursor: pointer;
+
+}
+aside {
+  height: 100%;
+  width: 250px;
+  overflow-y: auto;
+  margin-left: -250px;
+  position: fixed;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+aside.open{
+    margin-left: 0 !important;
+}
+aside a.active {
+    background-color: #ccc;
+}
+aside a:hover:not(.active) {
+  background-color: #dbd8d8;
+}
+aside hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #4d4949;
+}
+aside a img{
+    width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* Start Aside */
+/* Start Main */
+main{
+  background-color: #bdbaba;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-width: 100%;
+}
+main .video{
+  width: calc((100% / 4) - 20px);
+  overflow: hidden;
+  height: fit-content;
+  cursor: pointer;
+}
+@media (max-width:991px ) {
+  main .video{
+    width: calc((100% / 2) - 20px);
+
+  }
+}
+@media (max-width:556px ) {
+  main .video{
+    width: 100%;
+
+  }
+}
+main .video .video-img{
+  width: 100%;
+  height: 150px;
+}
+.video .video-img img{
+  width: 100%;
+  height: 100%;
+}
+.video .creator{
+  width: 20px;
+  height: 20px;
+}
+
+.video .title a{
+  color: #4d4949;
+}
+/* End Main */
